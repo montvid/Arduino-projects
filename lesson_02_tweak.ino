@@ -22,7 +22,7 @@ void loop()
   // If the button is on blink 2 red lights
   else
   {
-    int kartai=0;
+    int count=0;
     while ( digitalRead(2) == 1 )
     {
       digitalWrite(3, 0);
@@ -32,12 +32,11 @@ void loop()
       digitalWrite(4, 1);
       digitalWrite(5, 0);
       delay(1000);
-      kartai++;
+      count++;
     }
     // jei lemputės sublyksėjo daugiau nei 2 kartus atleidus mygtuką užsidegs ir degs visos 3 lemputės. Jei mažiau tai ims vėl degti tik žalia.
-    // If the button is on & the 2 red lights are blinking for 3 times or more - turn on all 3 lights on release of the button.
-
-    if (kartai > 2)
+    // If the button is on & the 2 red lights are blinking for 3 counts or more - turn on all 3 lights on release of the button.
+    if (count > 2)
       {
         digitalWrite(3, 1);
         digitalWrite(4, 1);
