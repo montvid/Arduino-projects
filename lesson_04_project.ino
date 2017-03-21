@@ -14,12 +14,12 @@ void setup()
 
 void loop()
 {
-  //Calculate temperature from the sensor value
+  //Calculate temperature from the sensor value 0-1023 range
   int sensorValue = analogRead(sensorPin);
   float voltage = sensorValue / 1024.0 * 5.0;
   float temperature = (voltage - .5) * 100;
   Serial.println(temperature);
-  //Choose LED color for different temperatures
+  //Choose LED color for different temperatures from 0-255 range
   if(temperature < baselineTemp)
   {
     analogWrite(redLEDPin, 0);
