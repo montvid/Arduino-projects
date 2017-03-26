@@ -1,10 +1,10 @@
 void setup()
 {
   // put your setup code here, to run once:
-  pinMode(2, INPUT);
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(5, OUTPUT);
+  pinMode(2, INPUT); //Button
+  pinMode(3, OUTPUT);//Green LED
+  pinMode(4, OUTPUT);//Red LED
+  pinMode(5, OUTPUT);//Red LED
 }
 
 void loop()
